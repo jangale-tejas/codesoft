@@ -1,0 +1,269 @@
+/* Reset Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Container Class */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center items */
+}
+
+header .logo h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center; /* Vertically center the links */
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+  color: white; /* Ensure text stays visible on hover */
+}
+
+/* Hero Section */
+#hero {
+  background-image: url('your-image-path-here.jpg'); /* Background Image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Lower opacity */
+}
+
+#hero .hero-content {
+  position: relative;
+}
+
+#hero h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #333;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Contact Us - New Styling */
+.contact-info {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+/* Courses Section */
+.courses-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  width: 30%;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Add space below the course card */
+}
+
+.course-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.course-card h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.course-card p {
+  color: #777;
+  margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonials-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  width: 45%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+form button {
+  padding: 14px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .courses-container, .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card, .testimonial-card {
+    width: 80%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
